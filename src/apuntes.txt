@@ -1,0 +1,60 @@
+1) VARIABLES
+
+- Llamo a la var / nombre de la variable = valor de la variable
+var/let         nombre (enCamelCase)  = "John"
+
+- Cómo cambiar valor de una var:
+var fulanita = 10 (es cuando la definí)
+fulanita = 30
+
+- Tmb puedo declarar una var sin valor para darle valor mas adelante
+
+2) CONSTANTES
+
+const textoParaAlumno = 'la nota es 10'
+
+3) NOTAS
+
+- Mejor usar una sola comilla por ahora
+- El punto y coma es opcional en archivos JS
+- Hay dos tipos de comentarios
+// linea simple
+/* escribo en parrafo
+ enter y listo
+ */
+- ES5
+se usa var
+- ES6
+se usa let
+
+4) PROMPT
+Es como un input de html pero en JS
+Se usa para pedirles datos al usuario
+Lo puedo usar con variables o constantes  
+Aparece una ventanita para que escriba y luego aparece el rdo en la web
+
+5) CONSOLA
+La sentencia: console.log() muestra un mensaje que el usuario no puede ver
+Se usa para pruebas 
+
+6) DIAGRAMA
+           SE LOGEO?
+
+    NO                  SI
+
+LE MUESTRO          LE MUESTRO
+PRECIO NORMAL       PRECIO 50%
+
+7) CONDICIONALES
+if (nombre de la variable) {
+    alert / console.log 
+}
+
+8) TERMINOS
+Para separar en terminos usamos ()
+Ej: if (nombre de la variable) && (nombre de la variable) && (nombre de la variable) {
+
+9) ESCRIBIR
+- document.write: escribe en el html
+- console.log: escribe en CONSOLA
+- alert: escribe en el prompt 
