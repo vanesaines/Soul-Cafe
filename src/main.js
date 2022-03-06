@@ -1,4 +1,6 @@
+// ############################################################
 // Actividad 1: calculando precio menor y mayor
+// ############################################################
 
 console.log(`Actividad 1`);
 console.log(`Vendemos 5 cafecitos con diferentes precios`);
@@ -24,7 +26,9 @@ for (let i = 0; i > preciosDeCafe.length; i++) {
 
 console.log(`El café más caro sale ${max}`);
 
+// ############################################################
 // Actividad 2: Vuelto 
+// ############################################################
 
 console.log(`Actividad 2`)
 console.log(`El prompt inicial se utiliza para facilitar la entrega del vuelto al cliente`);
@@ -38,10 +42,15 @@ if (pago >= cafe) {
     alert(`El vuelto es ${vuelto}`);
 }
 
+// ############################################################
 // Desafio 1: Simulador interactivo
+// ############################################################
+
+console.log(`Desafio 1: Simulador interactivo`)
+console.log(`Ejemplo al final del codigo`)
 
 // productos es un objeto que mapea codigo de barras a productos
-// un producto tiene precio y nombre
+// un producto tiene nombre y precio
 const productos = {
     '4567864342': {'nombre': 'Americano', 'precio': 3},
     '0987863433': {'nombre': 'Capuchino', 'precio': 3.5},
