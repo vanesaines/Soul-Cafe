@@ -2,7 +2,7 @@
 // Actividad 1: calculando precio menor y mayor
 // ############################################################
 
-console.log(`Actividad 1`);
+/* console.log(`Actividad 1`);
 console.log(`Vendemos 5 cafecitos con diferentes precios`);
 console.log(`Calcular con JS el más barato y el más caro`);
 
@@ -39,8 +39,8 @@ pago = parseInt(pago);
 let vuelto = (pago - cafe);
 
 if (pago >= cafe) {
-    alert(`El vuelto es ${vuelto}`);
-}
+    alert(`El vuelto es ${vuelto}`); 
+} */
 
 // ############################################################
 // Desafio 1: Simulador interactivo
@@ -58,6 +58,7 @@ const productos = {
 };
 
 // Dado un codigo de barras, devuelve el producto (nombre y precio)
+
 function buscarProducto(codigoDeBarras) {
     return productos[codigoDeBarras];
 }
@@ -80,6 +81,21 @@ function cobrarProducto(codigoDeBarras, dineroPagado) {
 }
 
 cobrarProducto('0987863433', 4);
+/*
+function darVuelto (preciosDeCafe,pago,vuelto){
+    prompt('El cliente acaba de pedir un café . Ingresa con cuánto abona:');
+    if (pago >= precio) {
+    console.log(`el vuelto es`)
+
+    }
+pago = parseInt(pago);
+let vuelto = (pago - cafe);
+
+if (pago >= cafe) {
+    alert(`El vuelto es ${vuelto}`);
+}
+
+} */
 
 
 
