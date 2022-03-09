@@ -58,3 +58,53 @@ Ej: if (nombre de la variable) && (nombre de la variable) && (nombre de la varia
 - document.write: escribe en el html
 - console.log: escribe en CONSOLA
 - alert: escribe en el prompt 
+
+APUNTES ANDRES
+// ########################################
+// como definir variables
+// ########################################
+var a = 1;
+let a = 1;
+const a = 1;
+
+// var es global
+{
+    var a = 1;
+}
+a += 1;  // funciona
+
+// let vale solo en el scope en el que esta definido
+{
+    let a = 1;
+}
+a += 1;  // ERROR
+
+// const es como let, pero es una constante. No se puede reasignar.
+{
+    const a = 1;
+}
+a += 1;  // ERROR, a es constante
+
+
+// ########################################
+// Estructura de datos
+// ########################################
+
+// Arreglo / array / lista
+let arreglo = [1, 2, 3, 'asd'];
+
+// Se accede a valores así
+// se lee: "sea b igual a arreglo en posicion 0"
+let b = arreglo[0];  // b es el primer elemento de la lista.
+
+arreglo[0] = 'fulanito';  // el primer elemento de arreglo es 'fulanito'
+
+// Diccionario / hashmap / map / objeto
+let cumpleanos = {
+    'vane': '17/04/1994',
+    'andres': '06/03/1991',
+    'teo': '16/12/1994'
+};
+
+console.log(cumpleanos['vane']);
+
