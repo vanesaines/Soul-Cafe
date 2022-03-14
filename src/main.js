@@ -56,14 +56,7 @@ document.write(`<h1>HOLA MUNDO! HOLA CAFETEROS!</h1>
 <p>Caramel +$0.5</p>
 <p>Capuchino / Moka $4</p> <br>`)
 
-// productos es un OBJETO que mapea codigo de barras a productos
-// un producto tiene nombre y precio
-const productos = {
-    '4567864342': {'nombre': 'Americano', 'precio': 3},
-    '0987863433': {'nombre': 'Latte', 'precio': 3.5},
-    '2388909055': {'nombre': 'Capuchino', 'precio': 4},
-};
-
+/*
 // Dado un codigo de barras, devuelve el producto (nombre y precio)
 
 function buscarProducto(codigoDeBarras) {
@@ -88,7 +81,8 @@ function cobrarProducto(codigoDeBarras, dineroPagado) {
 }
 
 cobrarProducto('0987863433', 4);
-/*
+
+
 function darVuelto (preciosDeCafe,pago,vuelto){
     prompt('El cliente acaba de pedir un café . Ingresa con cuánto abona:');
     if (pago >= precio) {
@@ -180,6 +174,26 @@ productosSoloCafe.splice(1,1);
 // usando JOIN (lo que va entre elementos)
 carrito.push (productosSoloCafe.join('<br> + '));
 document.write (`${carrito} <br><br><br>`);
+
+// ARRAYS Y OBJETOS
+
+const productos = [
+{codigo: 1937843473, nombre: 'Americano', precio: 3},
+{codigo: 0987863433, nombre: 'Latte', precio: 3.5},
+{codigo: 2388909055, nombre: 'Capuchino', precio: 4},
+]
+
+const carro = [];
+
+function agregarAlCarro(producto){
+    carro.push(producto)
+}
+
+agregarAlCarro(productos);
+console.log(carro);
+
+agregarAlCarro(productos[2]);
+console.log(carro);
 
 
 
