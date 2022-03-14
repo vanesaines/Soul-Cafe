@@ -183,17 +183,30 @@ const productos = [
 {codigo: 2388909055, nombre: 'Capuchino', precio: 4},
 ]
 
-const carro = [];
+// usando forma vieja de definir FUNCIONES
+// function agregarAlCarro(producto){
+//     carro.push(producto)
+// }
 
-function agregarAlCarro(producto){
+// usando forma nueva de definir FUNCIONES
+const agregarAlCarro = (producto) => {
     carro.push(producto)
 }
+
+const carro = [];
 
 agregarAlCarro(productos);
 console.log(carro);
 
 agregarAlCarro(productos[2]);
 console.log(carro);
+
+// usando FOR ... OF (recorre el array por cada elem del obj)
+for (const producto of productos) {
+    console.log(producto.codigo);
+    console.log(producto.nombre);
+    console.log(producto.precio);
+}
 
 
 
