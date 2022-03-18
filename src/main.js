@@ -46,15 +46,7 @@ if (pago >= cafe) {
 // Desafio 1: Simulador interactivo
 // ############################################################
 
-document.write(`<h1>HOLA MUNDO! HOLA CAFETEROS!</h1>
-<p>La Fundación Todos Los Soles, está juntando fondos para ayudar a los niños desamparados por la inundación. <br> Nostros también queremos ayudar y lo haremos donando el 90% de nuestras ventas.</p>
-<p>Vos podés ser parte de esta ayuda con sólo comprar un cafecito.</p>
-<p>Gracias por ser parte!! Que tengas hermoso día!!</p>
-<br> <p>PRECIOS <hr> </p> 
-<p>Americano $3</p> 
-<p>Latte $3.50</p> 
-<p>Caramel +$0.5</p>
-<p>Capuchino / Moka $4</p> <br>`)
+document.write(``)
 
 /*
 // Dado un codigo de barras, devuelve el producto (nombre y precio)
@@ -96,7 +88,7 @@ if (pago >= cafe) {
     alert(`El vuelto es ${vuelto}`);
 }
 
-} */
+} 
 
 // ************* CLASE ARRAYS *****************************
 
@@ -175,7 +167,18 @@ productosSoloCafe.splice(1,1);
 carrito.push (productosSoloCafe.join('<br> + '));
 document.write (`${carrito} <br><br><br>`);
 
-// ARRAYS Y OBJETOS
+//OBJETOS
+
+/* crear un objeto (un solo producto)
+const productos = {
+    PROPIEDAD: VALOR, 
+    nombre: 'Americano', 
+    precio: 3
+} 
+
+
+
+// ARRAYS 
 
 const productos = [
 {codigo: 1937843473, nombre: 'Americano', precio: 3},
@@ -207,6 +210,8 @@ for (const producto of productos) {
     console.log(producto.nombre);
     console.log(producto.precio);
 }
+
+*/
 
 
 
