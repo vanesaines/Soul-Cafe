@@ -81,3 +81,26 @@ li a{
     background-color: #fbe7f8;
     color: #ec94d2;
 }
+.carrito{
+    background-color:  #64401d;
+    color: #fbe7f8;
+}
+.carrito-panel {
+    min-width: 180px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 12px;
+    margin-right: 12px;
+    background-color: #fbe7f8;
+    border-radius: 10%;
+}
+.carrito-panel tr {
+    padding: 6px;
+}
+.carrito-panel.hidden {
+    display: none;
+}
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+}

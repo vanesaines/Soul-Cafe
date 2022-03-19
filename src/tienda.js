@@ -37,20 +37,84 @@ function productoHTMLCard(cafe) {
             <h3 class="card-text">${cafe.nombre}</h3>
             <p class="card-text">${cafe.descripcion} <br> Precio regular $${cafe.precio} <br> Disponible:
                 #${cafe.tags[0]} #${cafe.tags[1]}</p>
-            <a href="#" class="btn">Lo quiero <i class="far fa-grin-hearts"></i> </a>
+            <button
+                href="#"
+                class="btn"
+                onclick="agregarAlCarrito('${cafe.nombre}')"
+            >
+                Lo quiero
+                <i class="far fa-grin-hearts"></i>
+            </button>
         </div>
     </div>`;
 }
 
-
-window.onload = function(e) {
-    let nodoTiendaContenido = '';
-    const nodoTienda = document.querySelector('.tienda');
-    for (cafe of PRODUCTOS){
-        nodoTiendaContenido += productoHTMLCard(cafe);
-    }
-
-
-    nodoTienda.innerHTML = nodoTiendaContenido;
+function productoHTMLCarritoEntrada(cafe) {
+    return `
+    <tr>
+        <td>${cafe.nombre}</td>
+        <td>$${cafe.precio}</td>
+        <td>
+            <button onclick="sacarDeCarrito('${cafe.nombre}')">
+                X
+            </button>
+        </td>
+    <tr>
+    `;
 }
 
+// carrito
+
+const carrito = [];
+
+function agregarAlCarrito(nombreProducto) {
+    const producto = PRODUCTOS.find((cafe) => cafe.nombre === nombreProducto);
+    carrito.push(producto);
+
+    // prompt('Queres agregasldkaslkdjal;kj');
+
+    dibujarCarrito();
+}
+
+function dibujarCarrito() {
+    const nodoCarritoNumero = document.querySelector('.carrito-numero');
+    nodoCarritoNumero.innerHTML = `${carrito.length}` ;
+
+    const nodoCarritoPanel = document.querySelector('.carrito-panel');
+    let nodoCarritoPanelContenido = '';
+    for (cafe of carrito) {
+        nodoCarritoPanelContenido = nodoCarritoPanelContenido + productoHTMLCarritoEntrada(cafe); 
+    }
+    nodoCarritoPanel.innerHTML = nodoCarritoPanelContenido;
+}
+
+function sacarDeCarrito(nombreProducto) {
+    const indexOfProducto = carrito.findIndex((producto) => producto.nombre === nombreProducto);
+    carrito.splice(indexOfProducto, 1);
+
+    dibujarCarrito();
+}
+
+function toggleCarrito() {
+    const carritoPanelNode = document.querySelector('.carrito-panel');
+    if (carritoPanelNode.classList.contains('hidden')) {
+        carritoPanelNode.classList.remove('hidden');
+    } else {
+        carritoPanelNode.classList.add('hidden');
+    }
+}
+
+// Se ejecuta despues que el navegador termino de cargar todo
+window.onload = function(e) {
+    // 1 - Buscar un nodo en el DOM con clase igual "tienda"
+    const nodoTienda = document.querySelector('.tienda');
+    // 2 - Inicializamos `nodoTiendaContenido` igual al texto vacio
+    let nodoTiendaContenido = '';
+    // 3 - Por cada cafe hacemos algo
+    for (cafe of PRODUCTOS){
+        nodoTiendaContenido = nodoTiendaContenido + productoHTMLCard(cafe);
+    }
+    // 4 - Al terminar el for, nodoTiendaContenido tiene como varlo todas las card de los cafes
+    // 5 - Le cambiamos el contenido al nodo .tienta para que tenga las cards
+    nodoTienda.innerHTML = nodoTiendaContenido;
+}
