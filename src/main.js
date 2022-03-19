@@ -46,7 +46,6 @@ if (pago >= cafe) {
 // Desafio 1: Simulador interactivo
 // ############################################################
 
-document.write(``)
 
 /*
 // Dado un codigo de barras, devuelve el producto (nombre y precio)
@@ -213,7 +212,68 @@ for (const producto of productos) {
 
 */
 
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+
+let usuario = prompt('Ingresa tu nombre y apellido :)');
+let contrasenia = prompt('Ingresa tu contraseña');
+
+let preciocafe = 0;
+
+if((usuario !="") && (usuario !="")){
+    console.log(`Su usuario es: ${usuario} y su contraseña es: ${contrasenia}`); 
+}else{
+    alert('Error: Ingresa nombre y apellido');
+}
+
+    do {cafe = prompt(`
+    Ingresa el café que desea comprar (ingresa el núm correspondiente): 
+    1. Americano
+    2. Latte
+    3. Capuchino
+    4. Moka
+    `);
+    } while ((cafe <= 0) || (cafe > 5))
+
+    
+    if (cafe == 1) {
+        precioCafe = 3;
+        nombreCafe = "Americano";
+    } else if (cafe == 2) {
+        precioCafe = 3.5;
+        nombreCafe = "Latte";
+    } else if (juego == 3) {
+        precioCafe = 4;
+        nombreCafe = "Capuchino";
+    } else if (juego == 4) {
+        precioCafe = 4;
+        nombreCafe = "Moka";
+
+    } else {
+        alert('Ese cafecito no está en nuestro catálogo :(');
+    }
+
+/*
+    hasta aca llegue 
+
+    if (precioCafe >= 0) {
+        alert(`El café ${nombreCafe} __ tiene un valor de $__  ${precioCafe} y viene con una croissant de regalo`);
 
 
+        function cobrarProducto(codigoDeBarras, dineroPagado) {
+            producto = buscarProducto(codigoDeBarras);
+        
+   \
+        
+            if (producto.precio <= dineroPagado) {
+                const vuelto = dineroPagado - producto.precio; 
+                console.log(`Cliente compro ${producto.nombre} y le tenemos que dar $${vuelto} de vuelto`);
+            } else {
+                const faltante = producto.precio - dineroPagado;
+                console.log(`Pedirle al cliente $${faltante} extra para poder venderle un ${producto.nombre}`);
+            }
+        }
+
+
+        */
 
 
