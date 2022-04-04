@@ -11,7 +11,8 @@
     // los nombres principales para archivos js pueden ser: main, script, app
     // el archivo suele ir en una carpeta llamada src
     // para vincular el archivo js con html uso la etiqueta SCRIPT src -->
-    <!-- <script src="./src/main.js"></script> -->
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -31,9 +32,9 @@
     <header>
         <ul>
             <li><a class="btn presente" href="./index.html">SOUL</a></li>
-            <li><a class="btn" href="./pages/test.html">Test</a></li>
+            <!-- <li><a class="btn" href="./pages/test.html">Test</a></li> -->
             <li><a class="btn" href="./pages/tienda.html">Tienda</a></li>
-            <li><a class="btn" href="./pages/reservar.html">Reservar</a></li>
+            <li><a class="btn" href="./pages/reservar.html">Quiénes Somos</a></li>
             <li><a class="btn" href="./pages/contacto.html">Contacto</a></li>
         </ul>
     </header>
@@ -45,7 +46,7 @@
             Vos y yo compartimos el amor por el buen café: </p>
         <p>el CAFE con ALMA</p>
         <p>¿Te animás a descubrir cuál es el café ideal para vos?</p>
-        <a class="btn" href="./pages/test.html">Hacer Test</a>
+        <a class="btn" id="myBtn" >Hacer Test</a>
     </div>
 
     <section class="tienda">
@@ -97,7 +98,7 @@
         <h2>Espacio personal</h2>
         <p>¿Te gustaría sentarte en un lugar tranquilo y bonito? <br> Contamos con ambientes ideales para descansar,
             estudiar y trabajar. <br> Podés usarlos libremente, ¡son para vos! </p>
-        <a class="btn" href="./pages/reservar.html">Reservar <i class="fas fa-calendar-check"></i></a>
+        <a class="btn" id="myBtnTwo">Reservar <i class="fas fa-calendar-check"></i></a>
     </div>
 
     <!-- banner -->
@@ -111,11 +112,12 @@
             <li><a class="btn logo" href="./index.html">SOUL</a></li>
             <li><a class="btn" href="./pages/test.html">Test</a></li>
             <li><a class="btn" href="./pages/tienda.html">Tienda</a></li>
-            <li><a class="btn" href="./pages/reservar.html">Reservar</a></li>
+            <li><a class="btn" href="./pages/reservar.html">Quiénes Somos</a></li>
             <li><a class="btn" href="./pages/contacto.html">Contacto</a></li>
         </ul>
     </footer>
-
+    <script src="./src/main.js"></script>
+    
 </body>
 
 </html>

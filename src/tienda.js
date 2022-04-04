@@ -65,13 +65,29 @@ function productoHTMLCarritoEntrada(cafe) {
 
 // carrito
 
+// const AGREGAR = [
+//     {
+//         nombre: 'Dairy free',
+//         precio: 0.5,
+//     },
+//     {
+//         nombre: 'Caramel',
+//         precio: 0.7,
+//     },
+//     ];
+
 const carrito = [];
 
 function agregarAlCarrito(nombreProducto) {
     const producto = PRODUCTOS.find((cafe) => cafe.nombre === nombreProducto);
     carrito.push(producto);
 
-    // prompt('Queres agregasldkaslkdjal;kj');
+    // prompt(`
+    // Agregar ${AGREGAR[0].nombre} por $${AGREGAR[0].precio}  (SI/NO)
+    // `);
+    // prompt(`
+    // Agregar ${AGREGAR[1].nombre} por $${AGREGAR[1].precio}  (SI/NO)
+    // `);
 
     dibujarCarrito();
 }
