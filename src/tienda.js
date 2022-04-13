@@ -63,19 +63,6 @@ function productoHTMLCarritoEntrada(cafe) {
     `;
 }
 
-// carrito
-
-// const AGREGAR = [
-//     {
-//         nombre: 'Dairy free',
-//         precio: 0.5,
-//     },
-//     {
-//         nombre: 'Caramel',
-//         precio: 0.7,
-//     },
-//     ];
-
 const carrito = [];
 
 function agregarAlCarrito(nombreProducto) {
@@ -130,7 +117,16 @@ window.onload = function(e) {
     for (cafe of PRODUCTOS){
         nodoTiendaContenido = nodoTiendaContenido + productoHTMLCard(cafe);
     }
-    // 4 - Al terminar el for, nodoTiendaContenido tiene como varlo todas las card de los cafes
-    // 5 - Le cambiamos el contenido al nodo .tienta para que tenga las cards
+    // 4 - Al terminar el for, nodoTiendaContenido tiene como valor todas las card de los cafes
+    // 5 - Le cambiamos el contenido al nodo .tienda para que tenga las cards
     nodoTienda.innerHTML = nodoTiendaContenido;
-}
+
+// fetch
+const baseURL = 'https://api.sampleapis.com/coffee/hot';
+fetch(baseURL)
+  .then(resp => resp.json())
+  .then(data => displayData(data));
+
+function displayData(data) {
+  document.querySelector("pre").innerHTML = JSON.stringify(data, null, 2);
+}}
