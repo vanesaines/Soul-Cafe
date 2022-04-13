@@ -13,8 +13,8 @@ reservar.addEventListener('click', () => {
     swal.fire({
         icon: 'success',
         title: 'Tu espacio ideal',
-        text: 'Reserva fácil y rápido por whatsapp',
-        confirmButtonText: '3513457890'
+        text: 'Reserva fácil y rápido por whatsapp: 3513457890',
+        confirmButtonText: 'Aceptar'
 
 
     })

@@ -120,13 +120,4 @@ window.onload = function(e) {
     // 4 - Al terminar el for, nodoTiendaContenido tiene como valor todas las card de los cafes
     // 5 - Le cambiamos el contenido al nodo .tienda para que tenga las cards
     nodoTienda.innerHTML = nodoTiendaContenido;
-
-// fetch
-const baseURL = 'https://api.sampleapis.com/coffee/hot';
-fetch(baseURL)
-  .then(resp => resp.json())
-  .then(data => displayData(data));
-
-function displayData(data) {
-  document.querySelector("pre").innerHTML = JSON.stringify(data, null, 2);
-}}
+}
