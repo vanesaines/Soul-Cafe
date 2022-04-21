@@ -5,13 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/css/favi.png" type="image/x-icon">
     <title>Contacto</title>
-    <!-- JS: mejor poner la etiqueta en head y no en body, p mejorar el seo
-    // otra opcion es crear un archivo js, lo cual es mucho mejor xq si es muy largo se hace eterno el head
-    // los nombres principales para archivos js pueden ser: main, script, app
-    // el archivo suele ir en una carpeta llamada src
-    // para vincular el archivo js con html uso la etiqueta SCRIPT src -->
-    <!-- <script src="../src/main.js"></script> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -30,12 +25,30 @@
 
     <header>
         <ul>
-            <li><a class="btn" href="../index.html">SOUL</a></li>
+            <li><a class="btn" href="../index.html">Soul</a></li>
             <!-- <li><a class="btn" href="./test.html">Test</a></li> -->
-            <li><a class="btn" href="./tienda.html">Tienda</a></li>
-            <li><a class="btn" href="./especiales.html">Especiales</a></li>
-            <li><a class="btn presente" href="./contacto.html">Contacto</a></li>
+            <li><a class="btn" href="./tienda.html">Store</a></li>
+            <li><a class="btn" href="./especiales.html">Specialties</a></li>
+            <li><a class="btn presente" href="./contacto.html">Contact</a></li>
         </ul>
     </header>
-
+    <main>
+        <div class="banner-five">
+            <h2>Events catering service</h2>
+            <p>Please fill in the information so that we can contact you asap</p>
+        </div>
+        <section class="formulario"> <!-- formulario  -->
+            <form class="form" action="#">
+                <input placeholder="First Name*" type="text" name="nombre" id="nombre" class="form__input" required>
+                <input placeholder="Last name*" type="text" name="apellido" id="apellido" class="form__input" required>
+                <input placeholder="Whatsapp*" type="tel" name="whatsapp" id="whatsapp" class="form__input" required>
+                <br><input placeholder="Email*" type="email" name="mail" id="mail" class="form__input" required>
+                
+                <input placeholder="Amount of people" type="number" name="cantidad" id="mail" class="form__input">
+                <input placeholder="Date" type="date" name="fecha" id="mail" class="form__input" >
+                <br><input type="submit" class="form__input form__input--submit btn" id="myBtnThree" value="Submit">
+            </form>
+        </section>
+    </main>
+<script src="/src/contact.js"></script>
 </body>

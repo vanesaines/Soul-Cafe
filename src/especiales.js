@@ -4,15 +4,12 @@ const ESPECIALES_API_URL = 'https://api.sampleapis.com/coffee/hot';
 function productoHTMLCard({title, description, ingredients}) {  
   const ingredientes = ingredients.map((i) => `<a href="#" class="card-link">${i}</a>`).join('\n');
 
-  return `<div class="card">
-            <div class="card-body">
+  return `<div class="card card-body card-especial">
               <h5 class="card-title">${title}</h5>
               <h6 class="card-subtitle mb-2 text-muted">${description}</h6>
-              <p class="card-text">Ingredientes:</p>
-                ${ingredientes}
-            </div>
-          </div>
-          <br>`;
+              <p class="card-text">Ingredients:</p>
+              ${ingredientes}
+            </div>`;
 }
 
 function dibujarEspeciales(cafes) {
@@ -33,6 +30,6 @@ function dibujarEspeciales(cafes) {
 window.onload = function(e) {
   fetch(ESPECIALES_API_URL)
     .then(resp => resp.json())
-    .then(data => data.filter((d) => d.id >= 5 && d.id <= 20))
+    .then(data => data.filter((d) => d.id >= 5 && d.id <= 19))
     .then(data => dibujarEspeciales(data));
 }
